@@ -1,0 +1,189 @@
+html, body {
+    width: 100%; /* Empêche le scroll horizontal */
+    overflow-x: hidden;
+}
+
+body {
+    padding-top: 100px;
+}
+
+.custom { /* la couleur du footer*/
+    background: linear-gradient(135deg, #0a0d12 0%, #0f1c2b 50%, #0e2f4c 100%) !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+}
+
+.logo-navbar {
+    height: 40px;       
+    width: auto;       
+    object-fit: contain;
+}
+
+.logo-footer {
+    max-width: 80px;
+}
+
+.skill-box {
+    background: #ffffff;
+    transition: 0.3s ease;
+}
+
+.skill-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* projet*/
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.hero {
+    padding-bottom: 60px;
+}
+
+/* Champs du formulaire */
+#contact input,
+#contact textarea {
+    background-color: #c4c2c2; /* gris pâle */
+    color: #000;               /* texte noir */
+}
+
+/* effet hover pour les icônes */
+#contact .social-icon {
+    transition: transform 0.3s, color 0.3s;
+}
+
+#contact .social-icon:hover {
+    transform: scale(1.3);
+}
+
+.dark-mode #contact .social-icon i {
+    color: #fff; /* blanc sur dark mode */
+}
+
+/* bouton back to top  */
+#backToTop {
+    bottom:20px; 
+    right:20px; 
+    width:40px; 
+    height:40px;
+}
+
+#backToTop:hover {
+    background-color: #0056b3;
+    transform: scale(1.1); /* léger effet hover */
+}
+
+
+/* DARK MODE */
+
+.dark-mode {
+    background-color: #111 !important;
+    color: #eee !important;
+}
+
+.dark-mode .navbar {
+    background-color: #222 !important;
+}
+
+.dark-mode .card,
+.dark-mode .p-4,
+.dark-mode .bg-white {
+    background-color: #1c1c1c !important;
+    color: #eee !important;
+}
+
+.dark-mode footer {
+    background-color: #000 !important;
+}
+
+.dark-mode .btn-dark {
+    background-color: #eee !important;
+    color: #000 !important;
+}
+
+.dark-mode .btn-outline-dark {
+    border-color: #eee;
+    color: #eee;
+}
+
+.dark-mode .btn-outline-dark:hover {
+    background-color: #eee;
+    color: #000;
+}
+
+a {
+    transition: 0.3s;
+}
+
+.dark-mode a {
+    color: #ffffff !important;
+}
+
+.dark-mode .skill-box {
+    background-color: #1c1c1c !important;
+}
+
+.dark-mode .skill-box .bi-laptop {
+    color: #fff !important;
+}
+
+.dark-mode .skill-box h4,
+.dark-mode .skill-box p {
+    color: #fff !important;
+}
+
+/* about.html */
+.dark-mode .skill-box,
+.dark-mode .border {
+    background-color: #1c1c1c !important;
+    color: #fff !important;
+}
+
+.dark-mode p,
+.dark-mode li,
+.dark-mode h3,
+.dark-mode h5,
+.dark-mode h6 {
+    color: #fff !important;
+}
+
+
+/* Dark mode pour les modals */
+.dark-mode .modal-content {
+    background-color: #1c1c1c; 
+    color: #eee; 
+}
+
+.dark-mode .modal-header,
+.dark-mode .modal-body,
+.dark-mode .modal-footer {
+    background-color: #1c1c1c;
+    color: #eee;
+}
+
+.dark-mode .modal-title {
+    color: #fff;
+}
+
+.dark-mode .btn-close {
+    filter: invert(1); /* Pour que le bouton de fermeture soit visible */
+}
+
+/* Bouton Envoyer dans Contact en dark mode */
+.dark-mode #contact .btn-dark {
+    background-color: #000 !important; /* fond noir */
+    color: #fff !important;            /* texte blanc */
+}
+
+.dark-mode #contact .btn-dark:hover {
+    background-color: #222 !important; /* hover légèrement plus clair */
+    color: #fff !important;
+}
+
+
+
+
+
+
+

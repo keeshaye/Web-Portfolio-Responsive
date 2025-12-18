@@ -12,35 +12,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = trim($_POST['message']);
 
     if (empty($name) || empty($message) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo "Merci de remplir correctement tous les champs.";
+        echo "Please fill all fields correctly.";
         exit;
     }
 
     $mail = new PHPMailer(true);
 
     try {
-        // Paramètres SMTP (exemple avec Gmail)
+        // SMTP credentials are hidden for security
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'keeshayesewduth100@gmail.com';
-        $mail->Password   = 'waaq berc kzwu sdwx';  
+        $mail->Username   = 'YOUR_EMAIL';
+        $mail->Password   = 'YOUR_APP_PASSWORD';  
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
 
-        // Destinataire
         $mail->setFrom($email, $name);
-        $mail->addAddress('keeshayesewduth100@gmail.com', 'Keeshaye');
+        $mail->addAddress('YOUR_EMAIL');
 
-        // Contenu du mail
         $mail->isHTML(true);
-        $mail->Subject = "Message depuis le portfolio";
-        $mail->Body    = "Nom : $name<br>Email : $email<br>Message :<br>$message";
+        $mail->Subject = "Message from portfolio";
+        $mail->Body    = "Name: $name<br>Email: $email<br>Message:<br>$message";
 
         $mail->send();
-        echo "Message envoyé avec succès !";
+        echo "Message sent!";
     } catch (Exception $e) {
-        echo "Erreur lors de l'envoi : {$mail->ErrorInfo}";
+        echo "Mail error: {$mail->ErrorInfo}";
     }
 }
 ?>
